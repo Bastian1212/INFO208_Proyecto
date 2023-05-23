@@ -40,6 +40,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://host.docker.internal:5000/api/"
+  "proxy": "http://172.17.0.1/api/"
   
 }
