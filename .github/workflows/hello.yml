@@ -27,22 +27,22 @@ jobs:
       with:
         node-version: '16'
     
+      
     - name: Install Google Chrome
       run: |
         wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
         sudo dpkg -i google-chrome-stable_current_amd64.deb
         sudo apt-get -f install
         
-    - name: Build and test API
-      working-directory: api
+    - name: Install dependencies and build API
       run: |
         cd client
-        npm install 
-        npm start & 
-        sleep 5 
-        cd .. 
-        cd api 
-        npm install 
+        npm install
         npm start &
-        sleep 5 
+        sleep 5
+        cd ..
+        cd api
+        npm install
+        npm start &
+        sleep 5
         npm test
