@@ -10,7 +10,7 @@ describe("Time login to page", function(){
 
         //launch the browser
 
-        const service = new chrome.ServiceBuilder(path.resolve(__dirname, '/chromedriver'));
+        const service = new chrome.ServiceBuilder(path.resolve(__dirname, './chromedriver'));
         const options = new chrome.Options();
         const driver = new Builder().forBrowser('chrome').setChromeService(service).setChromeOptions(options).build();
 
